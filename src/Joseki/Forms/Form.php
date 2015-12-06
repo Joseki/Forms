@@ -7,6 +7,12 @@ use Nextras\Forms\Controls\DatePicker;
 
 class Form extends \Nette\Application\UI\Form
 {
+
+    const FIND_FILE = ':upload_find_file';
+    const CHANGE_FILE = ':upload_change_file';
+    const REMOVE_FILE = ':upload_remove_file';
+
+
     /**
      * Adds DatePicker to enable user-friendly GUI for picking date
      * @param $name

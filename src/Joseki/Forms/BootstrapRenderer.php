@@ -223,10 +223,10 @@ HTML;
         $html = sprintf(
             $skeleton,
             $class,
-            $control->translate('Najít soubor'),
-            $control->translate('Změnit'),
+            $control->translate(Form::FIND_FILE),
+            $control->translate(Form::CHANGE_FILE),
             $control->getControl(),
-            $control->translate('Odstranit'),
+            $control->translate(Form::REMOVE_FILE),
             $this->renderErrors($control),
             $description
         );

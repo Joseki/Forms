@@ -11,11 +11,20 @@
     "require": {
         "php": ">= 5.3.0",
         "kdyby/forms-replicator": "@dev",
+        "nette/di": "~2.2",
         "nette/deprecated": "~2.2",
         "nette/forms": "~2.2",
         "nextras/forms": "~1.4"
     },
+    "require-dev": {
+        "nette/tester": "~1.0",
+        "nette/bootstrap": "~2.3",
+        "tracy/tracy": "~2.3"
+    },
     "autoload": {
         "classmap": ["src"]
+    },
+    "autoload-dev": {
+        "classmap": ["src", "tests"]
     }
 }

@@ -1,0 +1,5 @@
+joseki.forms:
+  messages:
+    'Joseki\Forms\Form::FIND_FILE': Foo
+    'Joseki\Forms\Form::CHANGE_FILE': Bar
+    'Joseki\Forms\Form::REMOVE_FILE': FooBar

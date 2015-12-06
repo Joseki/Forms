@@ -212,7 +212,7 @@ class BootstrapRenderer extends DefaultFormRenderer
                 </div>
                 <span class="input-group-addon btn btn-default btn-file">
                     <span class="fileinput-new">%s</span>
-                    <span class="fileinput-exists">%s</span>'
+                    <span class="fileinput-exists">%s</span>
                     %s
                 </span>
             <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">%s</a>

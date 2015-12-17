@@ -1,0 +1,24 @@
+<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+<div class="well form-container col-md-push-2 col-md-8">
+
+<div class="form-group">
+	<div class="col-sm-4 control-label"><label for="frm-file"></label></div>
+
+	<div class="col-sm-8">
+        <div class="fileinput fileinput-new input-group " data-provides="fileinput">
+            <div class="form-control" data-trigger="fileinput">
+                <span class="fileinput-filename"></span>
+            </div>
+            <span class="input-group-addon btn btn-default btn-file">
+                <span class="fileinput-new">AAA</span>
+                <span class="fileinput-exists">BBB</span>
+                <input type="file" name="file" id="frm-file">
+            </span>
+            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">CCC</a>
+        </div>
+    </div>
+</div>
+
+</div>
+<div><!--[if IE]><input type=IEbug disabled style="display:none"><![endif]--></div>
+</form>

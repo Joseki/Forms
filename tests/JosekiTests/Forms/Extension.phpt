@@ -2,9 +2,6 @@
 
 /**
  * Test:  Joseki\Forms\Extension.
- *
- * @testCase  Joseki\Forms\ExtensionTest
- * @author Miroslav Paul�k <miras.paulik@seznam.cz>
  */
 
 namespace JosekiTests\Forms;

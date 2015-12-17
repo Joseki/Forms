@@ -2,8 +2,8 @@
 
 namespace Joseki\Forms\DI;
 
-use Joseki\Forms\Messages;
 use Nette\DI\CompilerExtension;
+use Nette\PhpGenerator\ClassType;
 use Nette\Utils\Validators;
 
 class FormsExtension extends CompilerExtension
@@ -15,9 +15,9 @@ class FormsExtension extends CompilerExtension
 
 
 
-    public function loadConfiguration()
+    public function afterCompile(ClassType $class)
     {
-        $container = $this->getContainerBuilder();
+        $initialize = $class->getMethod('initialize');
         $config = $this->getConfig($this->defaults);
         Validators::assert($config['messages'], 'array');
 
@@ -25,7 +25,7 @@ class FormsExtension extends CompilerExtension
             if (!($name = constant($key))) {
                 throw new \InvalidArgumentException("Forms message key '$key' constant not defined");
             }
-            Messages::$messages[$name] = $message;
+            $initialize->addBody('\Joseki\Forms\Messages::$messages[?] = ?;', array($name, $message));
         }
     }
 

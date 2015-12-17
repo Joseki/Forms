@@ -206,27 +206,27 @@ class BootstrapRenderer extends DefaultFormRenderer
         $class = isset($c->class, $c->class[0]) ? $c->class[0] : '';
 
         $skeleton = <<<HTML
-            <div class="fileinput fileinput-new input-group %s" data-provides="fileinput">
-                <div class="form-control" data-trigger="fileinput">
-                    <span class="fileinput-filename"></span>
-                </div>
-                <span class="input-group-addon btn btn-default btn-file">
-                    <span class="fileinput-new">%s</span>
-                    <span class="fileinput-exists">%s</span>
-                    %s
-                </span>
-            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">%s</a>
+
+        <div class="fileinput fileinput-new input-group %s" data-provides="fileinput">
+            <div class="form-control" data-trigger="fileinput">
+                <span class="fileinput-filename"></span>
             </div>
-            %s
-            %s
+            <span class="input-group-addon btn btn-default btn-file">
+                <span class="fileinput-new">%s</span>
+                <span class="fileinput-exists">%s</span>
+                %s
+            </span>
+            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">%s</a>
+        </div>
+    %s%s
 HTML;
         $html = sprintf(
             $skeleton,
             $class,
-            $control->translate(Form::FIND_FILE),
-            $control->translate(Form::CHANGE_FILE),
+            $control->translate(Messages::$messages[Form::FIND_FILE]),
+            $control->translate(Messages::$messages[Form::CHANGE_FILE]),
             $control->getControl(),
-            $control->translate(Form::REMOVE_FILE),
+            $control->translate(Messages::$messages[Form::REMOVE_FILE]),
             $this->renderErrors($control),
             $description
         );

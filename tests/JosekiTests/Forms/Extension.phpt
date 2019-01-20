@@ -26,7 +26,7 @@ class ExtensionTest extends Tester\TestCase
         $configurator->onCompile[] = function ($config, Compiler $compiler) {
             $compiler->addExtension('joseki.forms', new  Joseki\Forms\DI\FormsExtension());
         };
-        $configurator->addConfig(__DIR__ . '/data/config.extension.neon', Nette\Configurator::NONE);
+        $configurator->addConfig(__DIR__ . '/data/config.extension.neon');
         $configurator->defaultExtensions = array(
             'php' => 'Nette\DI\Extensions\PhpExtension',
             'constants' => 'Nette\DI\Extensions\ConstantsExtension',

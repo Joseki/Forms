@@ -2,13 +2,13 @@
 
 namespace Joseki\Forms\Controls;
 
-use Kdyby\Replicator\Container;
+use Joseki\Forms\ReplicatorContainer;
 
 class SubmitButton extends \Nette\Forms\Controls\SubmitButton
 {
     public function addRemoveOnClick($callback = null)
     {
-        /** @var Container $replicator */
+        /** @var ReplicatorContainer $replicator */
         $replicator = $this->lookup(__NAMESPACE__ . '\Container');
         $this->setValidationScope(false);
         $this->onClick[] = function (SubmitButton $button) use ($replicator, $callback) {
@@ -27,7 +27,7 @@ class SubmitButton extends \Nette\Forms\Controls\SubmitButton
 
     public function addCreateOnClick($allowEmpty = false, $callback = null)
     {
-        /** @var Container $replicator */
+        /** @var ReplicatorContainer $replicator */
         $replicator = $this->lookup(__NAMESPACE__ . '\Container');
         $this->onClick[] = function (SubmitButton $button) use ($replicator, $allowEmpty, $callback) {
             if (!is_bool($allowEmpty)) {
@@ -45,4 +45,4 @@ class SubmitButton extends \Nette\Forms\Controls\SubmitButton
         };
         return $this;
     }
-} 
+}

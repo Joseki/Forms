@@ -11,11 +11,11 @@ use Nette\Utils\Html;
 class BootstrapRenderer extends DefaultFormRenderer
 {
 
-    protected $defaults = [
+    protected $defaults = array(
         'label' => 4,
         'control' => 8,
         'container' => 8
-    ];
+    );
 
     /** @var bool */
     private $controlsInit = false;

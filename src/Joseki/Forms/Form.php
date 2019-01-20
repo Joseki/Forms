@@ -2,7 +2,6 @@
 
 namespace Joseki\Forms;
 
-use Kdyby\Replicator\Container as RContainer;
 use Nextras\Forms\Controls\DatePicker;
 
 class Form extends \Nette\Application\UI\Form
@@ -36,7 +35,7 @@ class Form extends \Nette\Application\UI\Form
      */
     public function addDynamic($name, $factory, $createDefault = 0, $forceDefault = false)
     {
-        $control = new RContainer($factory, $createDefault, $forceDefault);
+        $control = new ReplicatorContainer($factory, $createDefault, $forceDefault);
         $control->currentGroup = $this->currentGroup;
         return $this[$name] = $control;
     }
